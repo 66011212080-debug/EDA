@@ -109,40 +109,39 @@
                   data = {nodes: nodes, edges: edges};
 
                   var options = {
-    "configure": {
-        "enabled": true,
-        "filter": [
-            "physics"
-        ]
-    },
-    "edges": {
-        "color": {
-            "inherit": true
-        },
-        "smooth": {
-            "enabled": true,
-            "type": "dynamic"
-        }
-    },
-    "interaction": {
-        "dragNodes": true,
-        "hideEdgesOnDrag": false,
-        "hideNodesOnDrag": false
-    },
-    "physics": {
-        "enabled": true,
-        "stabilization": {
-            "enabled": true,
-            "fit": true,
-            "iterations": 1000,
-            "onlyDynamicEdges": false,
-            "updateInterval": 50
-        }
-    }
-};
-
-                  
-
+                      "configure": {
+                          "enabled": false
+                      },
+                      "edges": {
+                          "color": {
+                              "inherit": true
+                          },
+                          "smooth": {
+                              "enabled": true,
+                              "type": "dynamic"
+                          }
+                      },
+                      "interaction": {
+                          "dragNodes": true,
+                          "hideEdgesOnDrag": false,
+                          "hideNodesOnDrag": false
+                      },
+                      "physics": {
+                          "enabled": true,
+                          "barnesHut": {
+                              "gravitationalConstant": -3000,
+                              "springLength": 200,
+                              "avoidOverlap": 0.5
+                          },
+                          "stabilization": {
+                              "enabled": true,
+                              "fit": true,
+                              "iterations": 1000,
+                              "onlyDynamicEdges": false,
+                              "updateInterval": 50
+                          }
+                      }
+                  };
 
                   
                   // if this network requires displaying the configure window,
