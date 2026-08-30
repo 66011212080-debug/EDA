@@ -11,8 +11,6 @@
 <h1></h1>
 </center>
 
-<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
-<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -24,7 +22,6 @@
           integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
           crossorigin="anonymous"
         ></script>
-
 
         <center>
           <h1></h1>
@@ -39,9 +36,6 @@
                  position: relative;
                  float: left;
              }
-
-             
-
              
              #config {
                  float: left;
@@ -49,23 +43,15 @@
                  height: 600px;
              }
              
-
-             
         </style>
     </head>
 
-
     <body>
         <div class="card" style="width: 100%">
-            
-            
             <div id="mynetwork" class="card-body"></div>
         </div>
-
         
-        
-            <div id="config"></div>
-        
+        <div id="config"></div>
 
         <script type="text/javascript">
 
@@ -85,15 +71,9 @@
                   value : []
               };
 
-              
-
-              
-
               // This method is responsible for drawing the graph, returns the drawn network
               function drawGraph() {
                   var container = document.getElementById('mynetwork');
-
-                  
 
                   // parsing and collecting nodes and edges from the python
                   nodes = new vis.DataSet([{"font": {"color": "black"}, "group": 2, "id": "artificial intelligence", "label": "artificial intelligence", "shape": "dot", "size": 216, "title": "artificial intelligence (216 papers) - Group 2"}, {"font": {"color": "black"}, "group": 1, "id": "machine learning", "label": "machine learning", "shape": "dot", "size": 184, "title": "machine learning (184 papers) - Group 1"}, {"font": {"color": "black"}, "group": 2, "id": "reinforcement learning", "label": "reinforcement learning", "shape": "dot", "size": 59, "title": "reinforcement learning (59 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "deep learning", "label": "deep learning", "shape": "dot", "size": 304, "title": "deep learning (304 papers) - Group 0"}, {"font": {"color": "black"}, "group": 1, "id": "convolutional neural networks", "label": "convolutional neural networks", "shape": "dot", "size": 36, "title": "convolutional neural networks (36 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "blockchain", "label": "blockchain", "shape": "dot", "size": 39, "title": "blockchain (39 papers) - Group 1"}, {"font": {"color": "black"}, "group": 2, "id": "graph neural networks", "label": "graph neural networks", "shape": "dot", "size": 47, "title": "graph neural networks (47 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "computer vision", "label": "computer vision", "shape": "dot", "size": 161, "title": "computer vision (161 papers) - Group 0"}, {"font": {"color": "black"}, "group": 1, "id": "cybersecurity", "label": "cybersecurity", "shape": "dot", "size": 44, "title": "cybersecurity (44 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "federated learning", "label": "federated learning", "shape": "dot", "size": 84, "title": "federated learning (84 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "anomaly detection", "label": "anomaly detection", "shape": "dot", "size": 38, "title": "anomaly detection (38 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "optimization", "label": "optimization", "shape": "dot", "size": 25, "title": "optimization (25 papers) - Group 1"}, {"font": {"color": "black"}, "group": 2, "id": "natural language processing", "label": "natural language processing", "shape": "dot", "size": 44, "title": "natural language processing (44 papers) - Group 2"}, {"font": {"color": "black"}, "group": 2, "id": "large language models", "label": "large language models", "shape": "dot", "size": 150, "title": "large language models (150 papers) - Group 2"}, {"font": {"color": "black"}, "group": 2, "id": "virtual reality", "label": "virtual reality", "shape": "dot", "size": 34, "title": "virtual reality (34 papers) - Group 2"}, {"font": {"color": "black"}, "group": 2, "id": "knowledge graph", "label": "knowledge graph", "shape": "dot", "size": 28, "title": "knowledge graph (28 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "explainable ai", "label": "explainable ai", "shape": "dot", "size": 42, "title": "explainable ai (42 papers) - Group 0"}, {"font": {"color": "black"}, "group": 2, "id": "human-computer interaction", "label": "human-computer interaction", "shape": "dot", "size": 27, "title": "human-computer interaction (27 papers) - Group 2"}, {"font": {"color": "black"}, "group": 1, "id": "digital twin", "label": "digital twin", "shape": "dot", "size": 31, "title": "digital twin (31 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "internet of things", "label": "internet of things", "shape": "dot", "size": 33, "title": "internet of things (33 papers) - Group 1"}, {"font": {"color": "black"}, "group": 1, "id": "deep reinforcement learning", "label": "deep reinforcement learning", "shape": "dot", "size": 30, "title": "deep reinforcement learning (30 papers) - Group 1"}, {"font": {"color": "black"}, "group": 0, "id": "pattern recognition", "label": "pattern recognition", "shape": "dot", "size": 60, "title": "pattern recognition (60 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "transformer", "label": "transformer", "shape": "dot", "size": 44, "title": "transformer (44 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "convolutional neural network", "label": "convolutional neural network", "shape": "dot", "size": 33, "title": "convolutional neural network (33 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "vision transformer", "label": "vision transformer", "shape": "dot", "size": 37, "title": "vision transformer (37 papers) - Group 0"}, {"font": {"color": "black"}, "group": 2, "id": "generative ai", "label": "generative ai", "shape": "dot", "size": 63, "title": "generative ai (63 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "image processing", "label": "image processing", "shape": "dot", "size": 28, "title": "image processing (28 papers) - Group 0"}, {"font": {"color": "black"}, "group": 1, "id": "edge computing", "label": "edge computing", "shape": "dot", "size": 56, "title": "edge computing (56 papers) - Group 1"}, {"font": {"color": "black"}, "group": 0, "id": "feature extraction", "label": "feature extraction", "shape": "dot", "size": 25, "title": "feature extraction (25 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "object detection", "label": "object detection", "shape": "dot", "size": 47, "title": "object detection (47 papers) - Group 0"}, {"font": {"color": "black"}, "group": 2, "id": "graph neural network", "label": "graph neural network", "shape": "dot", "size": 31, "title": "graph neural network (31 papers) - Group 2"}, {"font": {"color": "black"}, "group": 1, "id": "intrusion detection", "label": "intrusion detection", "shape": "dot", "size": 27, "title": "intrusion detection (27 papers) - Group 1"}, {"font": {"color": "black"}, "group": 2, "id": "multi-agent systems", "label": "multi-agent systems", "shape": "dot", "size": 37, "title": "multi-agent systems (37 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "cnn", "label": "cnn", "shape": "dot", "size": 34, "title": "cnn (34 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "neural networks", "label": "neural networks", "shape": "dot", "size": 29, "title": "neural networks (29 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "multimodal fusion", "label": "multimodal fusion", "shape": "dot", "size": 45, "title": "multimodal fusion (45 papers) - Group 0"}, {"font": {"color": "black"}, "group": 2, "id": "large language model", "label": "large language model", "shape": "dot", "size": 40, "title": "large language model (40 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "attention mechanism", "label": "attention mechanism", "shape": "dot", "size": 45, "title": "attention mechanism (45 papers) - Group 0"}, {"font": {"color": "black"}, "group": 1, "id": "artificial intelligence (ai)", "label": "artificial intelligence (ai)", "shape": "dot", "size": 25, "title": "artificial intelligence (ai) (25 papers) - Group 1"}, {"font": {"color": "black"}, "group": 0, "id": "lstm", "label": "lstm", "shape": "dot", "size": 26, "title": "lstm (26 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "knowledge distillation", "label": "knowledge distillation", "shape": "dot", "size": 23, "title": "knowledge distillation (23 papers) - Group 0"}, {"font": {"color": "black"}, "group": 2, "id": "multimodal learning", "label": "multimodal learning", "shape": "dot", "size": 34, "title": "multimodal learning (34 papers) - Group 2"}, {"font": {"color": "black"}, "group": 0, "id": "contrastive learning", "label": "contrastive learning", "shape": "dot", "size": 31, "title": "contrastive learning (31 papers) - Group 0"}, {"font": {"color": "black"}, "group": 0, "id": "self-supervised learning", "label": "self-supervised learning", "shape": "dot", "size": 24, "title": "self-supervised learning (24 papers) - Group 0"}, {"font": {"color": "black"}, "group": 1, "id": "internet of things (iot)", "label": "internet of things (iot)", "shape": "dot", "size": 25, "title": "internet of things (iot) (25 papers) - Group 1"}, {"font": {"color": "black"}, "group": 2, "id": "retrieval-augmented generation", "label": "retrieval-augmented generation", "shape": "dot", "size": 32, "title": "retrieval-augmented generation (32 papers) - Group 2"}, {"font": {"color": "black"}, "group": 1, "id": "spiking neural networks", "label": "spiking neural networks", "shape": "dot", "size": 25, "title": "spiking neural networks (25 papers) - Group 1"}]);
@@ -131,7 +111,7 @@
                           "barnesHut": {
                               "gravitationalConstant": -3000,
                               "springLength": 200,
-                              "avoidOverlap": 0.5
+                              "avoidOverlap": 0 
                           },
                           "stabilization": {
                               "enabled": true,
@@ -143,22 +123,18 @@
                       }
                   };
 
-                  
                   // if this network requires displaying the configure window,
                   // put it in its div
                   options.configure["container"] = document.getElementById("config");
                   
-
                   network = new vis.Network(container, data, options);
 
-                  
-
-                  
-
-                  
-
-
-                  
+                  // --------------------------------------------------------
+                  // ปิดระบบ Physics หลังจากโหนดจัดเรียงตัวเสร็จสิ้นเพื่อไม่ให้กราฟสั่น
+                  network.on("stabilizationIterationsDone", function () {
+                      network.setOptions( { physics: false } );
+                  });
+                  // --------------------------------------------------------
 
                   return network;
 
